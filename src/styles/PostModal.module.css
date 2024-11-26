@@ -1,0 +1,13 @@
+.persnalInputSection {
+    float: right;
+}
+
+.persnalInput {
+    margin-left: 2px;
+    width: 100px;
+    height: 20px;
+}
+
+.footer_btns {
+    margin: 0px auto 0px auto;
+}

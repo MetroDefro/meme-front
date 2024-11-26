@@ -1,0 +1,32 @@
+.sub_body {
+    width: 70%;
+    margin: 20px auto 0px auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.select_container {
+    margin-right: auto;
+}
+
+.select_box {
+    width: 150px;
+    margin-right: auto;
+}
+
+.search_container {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub_body_btn {
+    width: 70%;
+    margin: 20px auto 10px auto;
+}
+
+.write_btn {
+    float: right
+}
