@@ -30,6 +30,10 @@ const PostModal = ({ isOpen, onClose }) => {
         });
     };
 
+    const handleCancelbtn = (e) => {
+        onClose();
+    }
+
     const handleWritebtn = () => {
         // Post
     }
@@ -40,8 +44,8 @@ const PostModal = ({ isOpen, onClose }) => {
         <Modal show={isOpen} onHide={onClose}>
             <Modal.Body>
                 <Form.Floating>
-                    <Button variant="outline-secondary" id="imgbtn" onClick={handleImgbtn} disabled={isImage}>이미지</Button>
-                    <Button variant="outline-secondary" id="vdobtn" onClick={handleVdobtn} disabled={!isImage}>동영상</Button>
+                    <Button variant="outline-secondary" onClick={handleImgbtn} disabled={isImage}>이미지</Button>
+                    <Button variant="outline-secondary" onClick={handleVdobtn} disabled={!isImage}>동영상</Button>
                     <div className={styles.persnalInputSection}>
                         <div class="form-floating mb-3">
                             <span>ID:</span>
@@ -51,11 +55,11 @@ const PostModal = ({ isOpen, onClose }) => {
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <Form.Control class="form-control" id="image" placeholder="소스" name="source" value={formData.source} onChange={handleInputChange}/>
+                        <Form.Control class="form-control" placeholder="소스" name="source" value={formData.source} onChange={handleInputChange}/>
                         <label for="floatingInput">소스</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <Form.Control class="form-control" id="title" placeholder="밈 이름" name="title" value={formData.title} onChange={handleInputChange} />
+                        <Form.Control class="form-control" placeholder="밈 이름" name="title" value={formData.title} onChange={handleInputChange} />
                         <label for="floatingInput">밈 이름</label>
                     </div>
                     <div class="input-group mb-3">
@@ -97,8 +101,8 @@ const PostModal = ({ isOpen, onClose }) => {
             </Modal.Body>
             <Modal.Footer>
                 <div className={styles.footer_btns}>
-                    <Button type="button" variant="primary" id="writebtn" onClick={handleWritebtn} onChange={handleInputChange} disabled={!isFormValid}>업로드</Button>
-                    <Button type="button" variant="secondary">취소</Button>
+                    <Button type="button" variant="primary" onClick={handleWritebtn} onChange={handleInputChange} disabled={!isFormValid}>업로드</Button>
+                    <Button type="button" variant="secondary" onClick={handleCancelbtn}>취소</Button>
                 </div>
             </Modal.Footer>
         </Modal>
